@@ -1,0 +1,4 @@
+﻿  smtp_normal.cpp
+C:\Users\appeon\Desktop\TestCurlSMTP\TestCurlSMTP\smtp_normal.cpp(32,1): warning C4005: 'CURL_STATICLIB': macro redefinition
+C:\Users\appeon\Desktop\TestCurlSMTP\TestCurlSMTP\smtp_normal.cpp : message : see previous definition of 'CURL_STATICLIB'
+  TestCurlSMTP.vcxproj -> C:\Users\appeon\Desktop\TestCurlSMTP\Debug\TestCurlSMTP.exe
