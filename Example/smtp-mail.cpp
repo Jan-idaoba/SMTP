@@ -24,10 +24,12 @@
  * Send email with SMTP
  * </DESC>
  */
- 
+#define CURL_STATICLIB
 #include <stdio.h>
 #include <string.h>
-#include <curl/curl.h>
+#include "libcurl/include/curl/curl.h"
+
+#pragma comment(lib, "libcurl/lib/libcurl_debug.lib")
  
 /*
  * For an SMTP example using the multi interface please see smtp-multi.c.
@@ -87,7 +89,7 @@ static size_t payload_source(char *ptr, size_t size, size_t nmemb, void *userp)
   return 0;
 }
  
-int main(void)
+int main_mail(void)
 {
   CURL *curl;
   CURLcode res = CURLE_OK;

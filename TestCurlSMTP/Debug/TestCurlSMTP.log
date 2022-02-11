@@ -1,4 +1,7 @@
 ﻿  smtp_normal.cpp
-C:\Users\appeon\Desktop\TestCurlSMTP\TestCurlSMTP\smtp_normal.cpp(32,1): warning C4005: 'CURL_STATICLIB': macro redefinition
-C:\Users\appeon\Desktop\TestCurlSMTP\TestCurlSMTP\smtp_normal.cpp : message : see previous definition of 'CURL_STATICLIB'
-  TestCurlSMTP.vcxproj -> C:\Users\appeon\Desktop\TestCurlSMTP\Debug\TestCurlSMTP.exe
+C:\Users\appeon\Desktop\Project\SMTP\TestCurlSMTP\smtp_normal.cpp(1,1): warning C4005: 'CURL_STATICLIB': macro redefinition
+C:\Users\appeon\Desktop\Project\SMTP\TestCurlSMTP\smtp_normal.cpp : message : see previous definition of 'CURL_STATICLIB'
+  smtp_tls.cpp
+  Generating Code...
+  LINK : C:\Users\appeon\Desktop\Project\SMTP\Debug\TestCurlSMTP.exe not found or not built by the last incremental link; performing full link
+  TestCurlSMTP.vcxproj -> C:\Users\appeon\Desktop\Project\SMTP\Debug\TestCurlSMTP.exe

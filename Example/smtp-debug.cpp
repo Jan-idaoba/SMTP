@@ -23,8 +23,11 @@
  * Show how CURLOPT_DEBUGFUNCTION can be used.
  * </DESC>
  */
+#define CURL_STATICLIB
 #include <stdio.h>
-#include <curl/curl.h>
+#include "libcurl/include/curl/curl.h"
+
+#pragma comment(lib, "libcurl/lib/libcurl_debug.lib")
  
 struct data {
   char trace_ascii; /* 1 or 0 */
@@ -121,7 +124,7 @@ int my_trace(CURL *handle, curl_infotype type,
   return 0;
 }
  
-int main(void)
+int main_debug(void)
 {
   CURL *curl;
   CURLcode res;

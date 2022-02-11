@@ -24,10 +24,12 @@
  * SMTP example showing how to verify an email address
  * </DESC>
  */
- 
+#define CURL_STATICLIB
 #include <stdio.h>
 #include <string.h>
-#include <curl/curl.h>
+#include "libcurl/include/curl/curl.h"
+
+#pragma comment(lib, "libcurl/lib/libcurl_debug.lib")
  
 /* This is a simple example showing how to verify an email address from an
  * SMTP server.
@@ -40,7 +42,7 @@
  *    address does not exist.
  */
  
-int main(void)
+int main_vrfy(void)
 {
   CURL *curl;
   CURLcode res;

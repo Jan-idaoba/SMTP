@@ -24,10 +24,12 @@
  * Send email on behalf of another user with SMTP
  * </DESC>
  */
- 
+#define CURL_STATICLIB
 #include <stdio.h>
 #include <string.h>
-#include <curl/curl.h>
+#include "libcurl/include/curl/curl.h"
+
+#pragma comment(lib, "libcurl/lib/libcurl_debug.lib")
  
 /*
  * This is a simple example show how to send an email using libcurl's SMTP
@@ -90,7 +92,7 @@ static size_t payload_source(char *ptr, size_t size, size_t nmemb, void *userp)
   return 0;
 }
  
-int main(void)
+int main_expn(void)
 {
   CURL *curl;
   CURLcode res = CURLE_OK;

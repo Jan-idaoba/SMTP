@@ -24,9 +24,11 @@
  * SMTP example using the multi interface
  * </DESC>
  */
- 
+#define CURL_STATICLIB
 #include <string.h>
-#include <curl/curl.h>
+#include "libcurl/include/curl/curl.h"
+
+#pragma comment(lib, "libcurl/lib/libcurl_debug.lib")
  
 /* This is an example showing how to send mail using libcurl's SMTP
  * capabilities. It builds on the smtp-mail.c example to demonstrate how to use
@@ -80,7 +82,7 @@ static size_t payload_source(char *ptr, size_t size, size_t nmemb, void *userp)
   return 0;
 }
  
-int main(void)
+int main_multi(void)
 {
   CURL *curl;
   CURLM *mcurl;
